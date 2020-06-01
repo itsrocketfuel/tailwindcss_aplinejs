@@ -23,6 +23,11 @@
     font-weight: 400;
 }
 
+.font-inter-bold {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
 .max-w-xxs 
 {
     max-width: 16rem;
