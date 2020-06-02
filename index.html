@@ -56,10 +56,12 @@
                     <div class="flex flex-col items-center">
                         <h1 class="font-bold text-6xl mb-3 leading-snug text-almost-black pl-5">Choose your plan</h1>
                         <div class="flex flex-row items-center pt-6 pb-6">
-                            <span class=" font-inter-bold text-2xl pr-10 text-almost-black">Monthly</span>
+                            <span class=" font-inter-bold text-2xl pr-10 text-almost-black" x-show="!open">Monthly</span>
+                            <span class=" font-inter text-2xl pr-10 text-almost-black" x-show="open">Monthly</span>
                             <img src="assets/imgs/Toggle.png" alt="toggle" class="hover:cursor-pointer" @click="open=true" x-show="!open">
                             <img src="assets/imgs/Toggle triggered.png" class="hover:cursor-pointer" alt="toggle" x-show="open" @click="open=false">
-                            <span class="font-inter text-2xl pl-8 text-almost-black">Yearly</span>
+                            <span class="font-inter text-2xl pl-8 text-almost-black" x-show="!open">Yearly</span>
+                            <span class="font-inter-bold text-2xl pl-8 text-almost-black" x-show="open">Yearly</span>
                         </div>
                     </div>
                     <div
