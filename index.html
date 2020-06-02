@@ -50,26 +50,54 @@
         <!-- Block 1 - Feature 08 - End -->
 
         <!-- Block 2 - Testimonial 03 - Start -->
-        <div class="pt-10 pb-10 mx-10">
+        <div class="pt-10 pb-10 mx-10" x-data="{open:false}">
             <div class="max-w-screen-xl rounded overflow-hidden shadow-md bg-white">
                 <div class="px-6 py-4">
                     <div class="flex flex-col items-center">
                         <h1 class="font-bold text-6xl mb-3 leading-snug text-almost-black pl-5">Choose your plan</h1>
                         <div class="flex flex-row items-center pt-6 pb-6">
-                            <span class="font-inter-bold text-2xl pr-10 text-almost-black">Monthly</span>
-                            <img src="assets/imgs/Toggle.png" alt="toggle">
+                            <span class=" font-inter-bold text-2xl pr-10 text-almost-black">Monthly</span>
+                            <img src="assets/imgs/Toggle.png" alt="toggle" class="hover:cursor-pointer" @click="open=true" x-show="!open">
+                            <img src="assets/imgs/Toggle triggered.png" class="hover:cursor-pointer" alt="toggle" x-show="open" @click="open=false">
                             <span class="font-inter text-2xl pl-8 text-almost-black">Yearly</span>
                         </div>
                     </div>
-                    <div class="flex flex-row border-2 border-almost-black rounded-xl group hover:bg-soft-pink hover:border-soft-pink">
+                    <div
+                        class="flex flex-row border-2 border-almost-black rounded-xl group hover:bg-soft-pink hover:border-soft-pink" x-show="!open">
                         <div class="m-4 pt-8 pl-10 pr-5 pb-10 max-w-screen-xl mr-64 ">
-                            <h2 class="text-3xl font-inter-bold text-almost-black mb-3 group-hover:text-white">Professional</h2>
-                            <p class="leading-8 text-2xl max-w-md text-almost-black group-hover:text-white">Lorem Ipsum is simply dummy
+                            <h2 class="text-3xl font-inter-bold text-almost-black mb-3 group-hover:text-white">
+                                Professional</h2>
+                            <p class="tracking-wide leading-8 text-2xl max-w-md text-almost-black group-hover:text-white">Lorem Ipsum
+                                is simply dummy
                                 text of the printing and
                                 typesetting industry. Lorem Ipsum</p>
                         </div>
                         <div class="ml-auto mr-16 mt-10 mb-12">
-                            <span class="font-inter-bolder text-almost-black ml-18 float-right mr-8 text-7xl group-hover:text-white">$48</span>
+                            <span
+                                class="font-inter-bolder text-almost-black ml-18 float-right mr-8 text-7xl group-hover:text-white">$48</span>
+                            <br />
+                            <button
+                                class="ml-8 bg-white text-almost-black px-8 py-2 border-almost-black border-2 text-3xl font-inter-bolder group-hover:text-white group-hover:border-white group-hover:bg-soft-pink">
+                                Subscribe
+                            </button>
+                        </div>
+                    </div>
+
+
+
+                    <div
+                        class="flex flex-row border-2 border-almost-black rounded-xl group hover:bg-soft-pink hover:border-soft-pink" x-show="open">
+                        <div class="m-4 pt-8 pl-10 pr-5 pb-10 max-w-screen-xl mr-64 ">
+                            <h2 class="text-3xl font-inter-bold text-almost-black mb-3 group-hover:text-white">
+                                Professional</h2>
+                            <p class="tracking-wide leading-8 text-2xl max-w-md text-almost-black group-hover:text-white">Lorem Ipsum
+                                is simply dummy
+                                text of the printing and
+                                typesetting industry. Lorem Ipsum</p>
+                        </div>
+                        <div class="ml-auto mr-16 mt-10 mb-12">
+                            <span
+                                class="font-inter-bolder text-almost-black ml-18 float-right mr-8 text-7xl group-hover:text-white">$299</span>
                             <br />
                             <button
                                 class="ml-8 bg-white text-almost-black px-8 py-2 border-almost-black border-2 text-3xl font-inter-bolder group-hover:text-white group-hover:border-white group-hover:bg-soft-pink">
@@ -79,9 +107,8 @@
                     </div>
                 </div>
             </div>
+            <!-- Block 2 - Testimonial 03 - End -->
         </div>
-        <!-- Block 2 - Testimonial 03 - End -->
-  </div>
-</body>
+        </body>
 
 </html>
