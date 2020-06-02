@@ -15,9 +15,10 @@ module.exports = {
     extend: {
       colors: {
         'almost-black': '#3d3d3d',
+        'soft-pink' : '#FF7171',
       }
     }
   },
-  variants: {},
+  variants: ['responsive', 'group-hover', 'group-focus', 'focus-within', 'first', 'last', 'odd', 'even', 'hover', 'focus', 'active', 'visited', 'disabled'],
   plugins: [],
 }
